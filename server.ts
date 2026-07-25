@@ -1,5 +1,6 @@
 if (process.env.NODE_ENV === 'production' && (!process.env.API_BEARER_TOKEN || !process.env.VAULT_ENCRYPTION_KEY || !process.env.JWT_SECRET)) {
-  console.warn('[WARNING] Running in production without all recommended environment variables (API_BEARER_TOKEN, VAULT_ENCRYPTION_KEY, JWT_SECRET). Robust in-memory and static fallbacks will be used.');
+    console.error('Refusing to start: API_BEARER_TOKEN, VAULT_ENCRYPTION_KEY, and JWT_SECRET must be set in production.');
+  process.exit(1);
 }
 
 import express from "express";
