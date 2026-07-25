@@ -1,0 +1,60 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id             String   @id
+  email          String   @unique
+  passwordHash   String
+  salt           String
+  vaultSalt      String?
+  hasCreatedBots Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  bots           Bot[]
+}
+
+model Bot {
+  id             String   @id
+  userId         String
+  name           String
+  symbol         String
+  timeframe      String
+  strategy       String   // e.g. "Gemini AI Decision"
+  status         String   @default("STOPPED") // "RUNNING" or "STOPPED"
+  balance        Float    @default(10000)
+  initialBalance Float    @default(10000)
+  positions      String   @default("[]") // JSON string of positions
+  history        String   @default("[]") // JSON string of history trades
+  logs           String   @default("[]") // JSON string of logs
+  aiModels       String   @default("[]") // JSON string of selected models/roles
+  discussionMode String   @default("SIMPLE_VOTE") // SIMPLE_VOTE, DISCUSSION, JUDGE
+  lastChecked    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trades         Trade[]
+}
+
+model Trade {
+  id          String   @id
+  botId       String
+  symbol      String
+  side        String   // BUY or SELL
+  entryPrice  Float
+  exitPrice   Float?
+  quantity    Float
+  fees        Float    @default(0)
+  slippage    Float    @default(0)
+  pnl         Float?
+  status      String   @default("OPEN") // OPEN, CLOSED, CANCELLED
+  openedAt    DateTime @default(now())
+  closedAt    DateTime?
+  bot         Bot      @relation(fields: [botId], references: [id], onDelete: Cascade)
+}

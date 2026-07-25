@@ -1,0 +1,51 @@
+[
+  {
+    "id": "user-xchmzfrm",
+    "email": "smoke_test_8sie66@example.com",
+    "passwordHash": "ca473d666d0f143d5b61c01053e978237fa1b6ae2e780c82d2bd1d016fc079ae0d5def9047795c895e8a9235d3aa5524e4785fc6652157cbf6a7da45c2f81328",
+    "salt": "4f584152eed76d4a5bd42123b6e2af23",
+    "createdAt": "2026-07-05T13:51:48.701Z"
+  },
+  {
+    "id": "user-ce31yryd",
+    "email": "smoke_test_tx2fi4@example.com",
+    "passwordHash": "3dc796cc54c6158f80cd6a8e3abb3a722a4454ce309d0477e2c9b6e55344dc119e377c22775ecf974839a103049c0a2a5e197467f7d5ad493501ba8ba97552ef",
+    "salt": "26ef1164a38277b9e083a490769d1b55",
+    "createdAt": "2026-07-05T13:52:15.420Z"
+  },
+  {
+    "id": "user-tdeftcs3",
+    "email": "smoke_test_0ezo5r@example.com",
+    "passwordHash": "18458d2cd25e9b41d09875b83871b154f0035b986882fc31cd895075941cf2ad0a71eb5e701e886811be5630877f647d4455ca612aaaee441d1d7b8e24d6fa69",
+    "salt": "5abb56f66074321989b47369c34398b8",
+    "createdAt": "2026-07-05T13:53:59.938Z"
+  },
+  {
+    "id": "user-g6y8tlyr",
+    "email": "smoke_test_kq2vmj@example.com",
+    "passwordHash": "ec4cc2747fe67091441e2f430c4296b0c72e221962c4095803da01ff94367b9a681678e383257e79c316379bdb4789a13cfc445dec0a86f1f430c7b60fc0b826",
+    "salt": "91b1df2e6e3208acb33ec8546404b16f",
+    "createdAt": "2026-07-05T14:19:37.608Z"
+  },
+  {
+    "id": "user-ery79bcr",
+    "email": "dafiolama@gmail.com",
+    "passwordHash": "6b28da4164ec66077cc42a999d9660a8dbc599ceb5378a14971d0ecc9c3480f972a55ab9819a18cbdaedd9e28819ed2fb7f27ef68b6aad8699458b5c3664b1ba",
+    "salt": "079b2ecf83bd07d79d9e75c7b61ae8bd",
+    "createdAt": "2026-07-07T07:45:58.819Z"
+  },
+  {
+    "id": "user-h2mz4odj",
+    "email": "li@op.com",
+    "passwordHash": "cb2c34b15c6c7f882447f274425e379b02834d4acc7f84b018a91af86202592de96622c0b126de22360505694fdb2d61b1451ce596aa08b790d5e7a2f36da2b4",
+    "salt": "4e32b9c2534a401aa62d1a4b8412d47e",
+    "createdAt": "2026-07-07T07:49:54.776Z"
+  },
+  {
+    "id": "user-gzlerrxb",
+    "email": "smoke_test_57o75y@example.com",
+    "passwordHash": "43d43b2e11dd56315c1470b3d81adec2b3842a4473ede09ecc514e9f2a1f4e93b256d6e1eb7e76c307e357c891ac3aa503bbfafa02e6ac9869ceaea4a0c7aa94",
+    "salt": "1150817fa963c029db166d73c4d67ae1",
+    "createdAt": "2026-07-07T08:27:04.151Z"
+  }
+]
